@@ -1,62 +1,97 @@
 @font-face {
-    font-family: 'vazir';
-    src: url('../fonts/vazir.eot'); 
-    src: url('../fonts/vazir.ttf')  format('truetype'), 
-         url('../fonts/vazir.woff2') format('woff2'), 
-         url('../fonts/vazir.woff') format('woff');
-  }
-
-  *{
-      padding: 0;
-      margin: 0;
-  }
-
-
-  body{
-      font-family: 'vazir';
-      direction: rtl;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #CC95C0;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  }
-
-  .search {
-    display: flex;
-  }
-
-  .search input {
-    width: 5px;
-    height: 30px;
-    font-family: 'vazir';
-    font-size: 14px;
-    padding: 5px 10px;
-    border: none;
-    outline: none;
-    position: relative;
-    box-sizing: border-box;
-    /* border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px; */
+  font-family: "vazir";
+  src: url("../fonts/vazir.eot");
+  src: url("../fonts/vazir.ttf") format("truetype"),
+    url("../fonts/vazir.woff2") format("woff2"),
+    url("../fonts/vazir.woff") format("woff");
 }
 
-.search button {
-    height: 30px;
-    width: 30px;
-    border: none;
-    padding: 5px 10px;
-    background-color: white;
-    box-sizing: border-box;
-    outline: none;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-    
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "vazir";
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #cc95c0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #7aa1d2,
+    #dbd4b4,
+    #cc95c0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #7aa1d2,
+    #dbd4b4,
+    #cc95c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.search {
+  height: 50px;
+  position: relative;
+  /* position: relative; */
+}
+
+.search .input {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  font-family: "vazir";
+  font-size: 15px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  transition: width .4s ease;
+  -webkit-transition: width .4s ease;
+  -moz-transition: width .4s ease;
+  -ms-transition: width .4s ease;
+  -o-transition: width .4s ease;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.search.active .input {
+    width: 300px;
+
+}
+.search .btn {
+  padding: 15px;
+  height: 50px;
+  width: 50;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: #00000095;
+  border-radius: 25px;
+  transition: transform .4s ease;
+  -webkit-transition: transform .4s ease;
+  -moz-transition: transform .4s ease;
+  -ms-transition: transform .4s ease;
+  -o-transition: transform .4s ease;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.search.active .btn {
+    transform: translateX(-250px);
+    -webkit-transform: translateX(-250px);
+    -moz-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    -o-transform: translateX(-250px);
 }
